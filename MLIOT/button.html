@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Example</title>
+    <script>
+        async function startProcess() {
+            document.getElementById("loading").style.display = "block"; // Show loading message
+
+            // Make the request to the backend
+            await fetch('/start-process');
+
+            // Redirect after the process is done
+            window.location.href = "/result";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Learning Process</h1>
+        <button onclick="startProcess()">Start Process</button>
+
+        <p id="loading" style="display: none;">Loading... Please wait</p>
+    </div>
+</body>
+</html>
