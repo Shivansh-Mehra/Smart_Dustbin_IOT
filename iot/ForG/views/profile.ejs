@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/stylesheets/style3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Image Section -->
+      <img
+        src="https://img.freepik.com/premium-vector/recycle-bin-red-yellow-blue-green-recycle-bins-sorting-waste_68708-690.jpg"
+        alt="Recycle Bins"
+        class="profile-image"
+      />
+      <h1>Your Profile</h1>
+
+      <form action="/profile" method="post">
+        <input type="text" name="name" placeholder="Name" value="<%= user.name %>" required>
+        <input type="email" name="email" placeholder="Email" value="<%= user.email %>" required>
+        <input type="password" name="password" placeholder="Password">
+        <!-- <textarea name="address" placeholder="Address"><%= user.address %></textarea> -->
+        <button type="submit">Update Profile</button>
+
+      </form>
+      <form action="/loader" method="get">
+        <button type="submit">Run Machine Learning Model</button>
+      </form>
+    </div>
+  </body>
+</html>

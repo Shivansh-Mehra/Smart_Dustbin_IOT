@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/various-reusable-trash-around-recycling-symbol_23-2148115693.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: backgroundMove 10s infinite linear;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: top left; }
+    50% { background-position: bottom right; }
+    100% { background-position: top left; }
+}
+
+.register-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.form-section {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-weight: 600;
+    color: #11998e;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out 0.5s forwards;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #38ef7d;
+    box-shadow: 0 0 10px rgba(56, 239, 125, 0.5);
+}
+
+button {
+    background: #38ef7d;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #11998e;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-link {
+    color: #11998e;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1);
+}

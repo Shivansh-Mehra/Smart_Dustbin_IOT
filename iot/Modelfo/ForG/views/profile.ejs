@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/stylesheets/style3.css" />
+  </head>
+  <body>
+    <div class="logo-container">
+      <a href="/profile">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/644/117/original/vector-recycle-icon-symbol-sign.jpg" alt="Logo" class="logo" />
+      </a>
+    </div>
+    <div class="container">
+      <!-- Image Section -->
+      <img
+        src="https://img.freepik.com/premium-vector/recycle-bin-red-yellow-blue-green-recycle-bins-sorting-waste_68708-690.jpg"
+        alt="Recycle Bins"
+        class="profile-image"
+      />
+      <h1>Your Profile</h1>
+
+      <!-- Display User Information -->
+      <div class="user-info">
+        <p><strong>Name:</strong> <%= user.name %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Points:</strong> <%= user.points %></p>
+      </div>
+
+      <!-- Button to run the ML model -->
+      <form action="/loader" method="get">
+        <button type="submit">Run Machine Learning Model</button>
+      </form>
+    </div>
+  </body>
+</html>

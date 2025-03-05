@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recycling Dustbin - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://img.freepik.com/free-photo/various-reusable-trash-around-recycling-symbol_23-2148115693.jpg");
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation for the body */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            width: 100%;
+            transform: translateY(-20px); /* Initial position for slide-in effect */
+            animation: slideIn 0.5s forwards; /* Slide-in animation for the container */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: #11998e;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            box-shadow: 0 0 5px rgba(17, 153, 142, 0.5); /* Highlight effect on focus */
+            border-color: #11998e; /* Change border color on focus */
+        }
+
+        button {
+            background: #38ef7d;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.2s ease; /* Transition for background and transform */
+        }
+
+        button:hover {
+            background: #11998e;
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+
+        .forgot-pass, .register {
+            color: #11998e;
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-pass:hover, .register:hover {
+            text-decoration: underline;
+        }
+
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="form-section">
+            <h1>Welcome Back</h1>
+            <form>
+                <input type="email" placeholder="Enter your email" required><br>
+                <input type="password" placeholder="Enter your password" required><br>
+                <button type="submit">Login</button>
+                <a href="#" class="forgot-pass">Forgot Password?</a>
+                <a href="registration.html" class="register">Don't have an account? Register here</a>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="https://t4.ftcdn.net/jpg/01/95/62/23/360_F_195622318_dv7HBiS8eK6NawFOUeZZBcB149VFO86s.jpg" alt="Recycling">
+        </div>
+    </div>
+</body>
+</html>

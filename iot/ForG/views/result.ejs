@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #4caf50, #00bcd4);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #4caf50;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #333;
+      margin: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Your Score</h1>
+    <p id="points"></p>
+    <p id="group"></p>
+    <!-- <p></p> -->
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const points = params.get('points');
+    const pro = params.get('confidence');
+  
+    const group = params.get('group')
+    document.getElementById('points').innerText = `You earned ${points} points!`;
+    document.getElementById('group').innerHTML = `Garbage Belongs to <b>${group}</b> with probability of ${pro*100} percent`;
+  </script>
+</body>
+
+</html>

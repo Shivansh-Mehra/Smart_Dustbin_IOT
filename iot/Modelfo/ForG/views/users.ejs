@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Farmers</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style3.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Farmers</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Farm Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user=> { %>
+          <tr>
+            <td>
+              <%= user.name %>
+            </td>
+            <td>
+              <%= user.email %>
+            </td>
+            <td>
+              <%= user.phone %>
+            </td>
+            <td>
+              <%= user.address %>
+            </td>
+            <!-- <td><%= farmer.farmDetails %></td> -->
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9); /* Soft green gradient background */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333; /* Base text color */
+}
+
+/* Container Styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 20px; /* Pronounced rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
+    max-width: 800px;
+    width: 100%;
+    padding: 40px; /* Ample padding for a spacious feel */
+    margin: 20px;
+    border: 1px solid rgba(200, 230, 201, 0.9); /* Soft green border */
+    backdrop-filter: blur(10px); /* Subtle blur effect for enhanced readability */
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px; /* Slightly spaced letters for elegance */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+h2 {
+    font-size: 28px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px; /* Slightly spaced letters for readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+a:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+a:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+    transform: translateY(1px); /* Slight depression effect when clicked */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 16px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounded corners for inputs */
+    font-size: 16px;
+    background-color: #f4f4f4; /* Slightly off-white background for inputs */
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #4caf50; /* Green border on focus */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.4); /* Enhanced green glow */
+    outline: none;
+    background-color: #ffffff; /* White background on focus for clarity */
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    background-color: #4caf50; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 12px; /* Rounded corners for button */
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for button */
+    position: relative; /* For overlay positioning */
+    overflow: hidden; /* Ensures overlay stays within bounds */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15); /* Soft white overlay */
+    transition: all 0.5s ease; /* Smooth sliding effect */
+    z-index: 1;
+}
+
+button:hover::before {
+    left: 0; /* Slide overlay to cover button on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+button:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow when clicked */
+    transform: translateY(1px); /* Slight depression effect when clicked */
+}
